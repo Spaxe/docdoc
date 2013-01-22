@@ -1,4 +1,3 @@
-malformed string
 
 # docdoc.py 
 Generates Python documentation in [Markdown](http://daringfireball.net/projects/markdown/) using [Python](http://python.org) docstrings.

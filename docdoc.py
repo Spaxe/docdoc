@@ -98,7 +98,6 @@ class DocumentationGenerator(ast.NodeVisitor):
         try:
             return str(ast.literal_eval(node))
         except Exception as e:
-            print e
             return str(node)
 
 def docdoc(filepath):
