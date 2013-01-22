@@ -8,11 +8,11 @@ Since the idea of Python is self-documenting, this should suffice for most small
 
 Markdown is chosen becuase the author likes it.  Thanks, John Gruber.
 
-# Usage (as a module)
+## Usage (as a module)
     >>> from docdoc import docdoc
     >>> print docodc(<filepath>)
 
-# Usage (from terminal)
+## Usage (from terminal)
     $ ./docdoc.py <filepath>
 
 Author: [Xavier Ho](mailto:contact@xavierho.com)
