@@ -1,3 +1,4 @@
+malformed string
 
 # docdoc.py 
 Generates Python documentation in Markdown using Python docstrings.
@@ -18,7 +19,7 @@ Since the idea of [Python](http://python.org) is self-documenting, this should s
 Author: [Xavier Ho](mailto:contact@xavierho.com)
 
 
-## DocumentationGenerator (<_ast.Attribute object at 0x1004b3a90>)
+## DocumentationGenerator (<_ast.Attribute object at 0x1004b5ad0>)
 Extracts docstrings from a Python AST node.
 
 This class should be used like an [ast.NodeVisitor][1]; see __main__ for an
@@ -32,7 +33,7 @@ retrieve the final markdown for further use.
 Constructor.
 
 
-### add_doc (self, name, args, documentation, level=value, decorators=value)
+### add_doc (self, name, args, documentation, level=1, decorators=None)
 Records a documentation item.
 
 
@@ -48,12 +49,16 @@ Automatically called when visiting a Module.
 Automatically called when visiting a ClassDef.
 
 
-### parse_ClassDef (self, node, level=value)
+### parse_ClassDef (self, node, level=2)
 Extracts documentation from a ClassDef.
 
 
-### parse_FunctionDef (self, node, level=value)
+### parse_FunctionDef (self, node, level=2)
 Extracts documentation from a FunctionDef.
+
+
+### parse_Literals (self, node)
+Extracts Python literals from a value/expression node.
 
 
 ## docdoc (filepath)

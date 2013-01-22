@@ -70,7 +70,7 @@ class DocumentationGenerator(ast.NodeVisitor):
         fields = [x for x in ast.iter_fields(node)]
         self.add_doc(
             fields[0][1],
-            '({})'.format(', '.join([str(x) for x in fields[1][1]])) if fields[1][1] else '',
+            '({})'.format(', '.join([self.parse_Literals(x) for x in fields[1][1]])) if fields[1][1] else '',
             ast.get_docstring(node),
             level=level,
             decorators=fields[3][1]
@@ -80,8 +80,7 @@ class DocumentationGenerator(ast.NodeVisitor):
         '''Extracts documentation from a FunctionDef.'''
         named_args = [x.id for x in node.args.args]
         for i, default in enumerate(node.args.defaults):
-            # TODO: Parse defaults
-            named_args[len(named_args)-len(node.args.defaults)+i] += '=' + 'value'
+            named_args[len(named_args)-len(node.args.defaults)+i] += '=' + self.parse_Literals(default)
         args = ', '.join(named_args)
         if node.args.vararg:
             args = ', '.join([args, '*'+str(node.args.vararg)])
@@ -93,6 +92,14 @@ class DocumentationGenerator(ast.NodeVisitor):
             ast.get_docstring(node),
             level=level
         )
+
+    def parse_Literals(self, node):
+        '''Extracts Python literals from a value/expression node.'''
+        try:
+            return str(ast.literal_eval(node))
+        except Exception as e:
+            print e
+            return str(node)
 
 def docdoc(filepath):
     '''Parses the Python source file.  Returns documentation in markdown.'''
