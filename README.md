@@ -19,7 +19,7 @@ Since the idea of [Python](http://python.org) is self-documenting, this should s
 Author: [Xavier Ho](mailto:contact@xavierho.com)
 
 
-## DocumentationGenerator (<_ast.Attribute object at 0x1004b5ad0>)
+## DocumentationGenerator (<_ast.Attribute object at 0x1004b5b10>)
 Extracts docstrings from a Python AST node.
 
 This class should be used like an [ast.NodeVisitor][1]; see __main__ for an
