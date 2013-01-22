@@ -1,13 +1,13 @@
 malformed string
 
 # docdoc.py 
-Generates Python documentation in Markdown using Python docstrings.
+Generates Python documentation in [Markdown](http://daringfireball.net/projects/markdown/) using [Python](http://python.org) docstrings.
 
 This module is an early experimentation to see how feasible it is to only use
 docstrings and class/function definitions as the source for documentation.
-Since the idea of [Python](http://python.org) is self-documenting, this should suffice for most small projects.
+Since the idea of Python is self-documenting, this should suffice for most small projects.
 
-[Markdown](http://daringfireball.net/projects/markdown/) is chosen becuase the author likes it.  Thanks, John Gruber.
+Markdown is chosen becuase the author likes it.  Thanks, John Gruber.
 
 # Usage (as a module)
     >>> from docdoc import docdoc
