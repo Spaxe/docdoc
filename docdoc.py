@@ -46,7 +46,7 @@ class DocumentationGenerator(ast.NodeVisitor):
                 heading = '#' * level,
                 args = args if level > 1 else '',
                 name = name,
-                docstring = docstring
+                docstring = docstring or ''
             )
         return output
 
