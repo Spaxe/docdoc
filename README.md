@@ -16,8 +16,6 @@ Since the idea of [Python](http://python.org) is self-documenting, this should s
 # Usage (from terminal)
     $ ./docdoc.py <filepath>
 
-Test
-
 Author: [Xavier Ho](mailto:contact@xavierho.com)
 
 
