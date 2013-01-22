@@ -7,6 +7,8 @@ Since the idea of Python is self-documenting, this should suffice for most small
 
 Markdown is chosen becuase the author likes it.  Thanks, John Gruber.
 
+This module was created quickly, so many features are missing.  If you would like to see something implemented, please [create an issue](https://github.com/Spaxe/docdoc/issues).
+
 ## Installation
 Get the module from Github (cheeseshop package coming soon):
 
