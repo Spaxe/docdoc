@@ -8,6 +8,13 @@ Since the idea of Python is self-documenting, this should suffice for most small
 
 Markdown is chosen becuase the author likes it.  Thanks, John Gruber.
 
+## Installation
+Get the module from Github (cheeseshop package coming soon):
+
+    $ git clone git://github.com/Spaxe/docdoc.git
+
+Add the module's path to ypur `$PYTHONPATH`.
+
 ## Usage (as a module)
     >>> from docdoc import docdoc
     >>> print docodc(<filepath>)
