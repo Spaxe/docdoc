@@ -20,8 +20,6 @@ Add the module's path to ypur `$PYTHONPATH`.
 
 ## Usage (from terminal)
     $ ./docdoc.py <filepath>
-
-Author: [Xavier Ho](mailto:contact@xavierho.com)
 '''
 import sys
 import ast

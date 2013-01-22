@@ -22,8 +22,6 @@ Add the module's path to ypur `$PYTHONPATH`.
 ## Usage (from terminal)
     $ ./docdoc.py <filepath>
 
-Author: [Xavier Ho](mailto:contact@xavierho.com)
-
 
 ## DocumentationGenerator (ast.NodeVisitor)
 Extracts docstrings from a Python AST node.
