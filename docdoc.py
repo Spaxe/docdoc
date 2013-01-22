@@ -95,6 +95,10 @@ class DocumentationGenerator(ast.NodeVisitor):
 
     def parse_Literals(self, node):
         '''Extracts Python literals from a value/expression node.'''
+        if isinstance(node, ast.Attribute):
+            return self.parse_Literals(node.value) + '.' + str(node.attr)
+        elif isinstance(node, ast.Name):
+            return str(node.id)
         try:
             return str(ast.literal_eval(node))
         except Exception as e:
